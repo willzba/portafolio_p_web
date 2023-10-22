@@ -1,0 +1,17 @@
+.espacio_mas{
+    padding-top: 1rem;
+}
+.portada_logo{
+    padding: 20% 20% 20% 20%;
+}
+h2{
+    color: #fff;
+    margin-bottom: 1rem;    
+}
+.portada_logo p{
+    color: #fff;
+    margin-top: 1rem;  
+}
+.card h4{
+    text-align: initial;
+}
