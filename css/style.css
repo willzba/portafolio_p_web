@@ -117,7 +117,7 @@ header .content h1{
 }
 header .content h1 span{
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: .01px #fff;
+    -webkit-text-stroke: .1px #fff;
 }
 header .content p{
     margin-bottom: 2rem;
