@@ -142,6 +142,7 @@ header .image::before{
 
 header .image img{
     max-width: 250px;
+    min-width: 200px;
     margin: auto;
 }
 
@@ -396,7 +397,7 @@ footer .column > a:hover{
 }
 
 @media (width < 600px){
-    .header .image::before{
+    .header ::before{
         display: none;
     }
     .features{
@@ -409,3 +410,18 @@ footer .column > a:hover{
         grid-template-columns: 1fr 150px;
     }
 }
+/*
+@media (width < 300px){
+    .header ::before{
+        display: none;
+    }
+    .features{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .pricing{
+        grid-template-columns: repeat(.5, 1fr);
+    }
+    footer{
+        grid-template-columns: 1fr 150px;
+    }
+}*/
