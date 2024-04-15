@@ -1,0 +1,15 @@
+.carousel-container {
+    width: 80%; /* Ancho del contenedor del carrusel */
+    margin: 0 auto; /* Centra el carrusel en la página */
+    overflow: hidden; /* Oculta las partes de las imágenes que están fuera del contenedor */
+}
+
+.carousel {
+    display: flex; /* Utiliza un flexbox para alinear las imágenes */
+    transition: transform 1s ease; /* Transición suave entre imágenes */
+}
+
+.carousel img {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de aspecto original */
+}
