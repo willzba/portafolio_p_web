@@ -110,6 +110,7 @@ input, select, textarea {
 		font-weight: 400;
 		font-size: 12pt;
 		line-height: 1.85em;
+		background-color:#303238;
 	}
 
 	a {
