@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/alertPlataforma.css">
 	<link rel="shortcut icon" href="images/signal1.png" type="image/x-icon">
 </head>
 
@@ -58,13 +59,20 @@
 
 				<!-- Banner -->
 				<div id="banner">
-					<h2><strong>VSTR:</strong> *Video Style Stream*
-						<br />
-						puedes compartir en cualquier plataforma a la vez y editar tus videos, <a
-							href="#main-wrapper">saber mas</a>
+					<h2><strong>VSTR:</strong> "Video Style Stream"
+
+						puedes compartir en cualquier plataforma a la vez y editar tus videos. <a
+							href="#main-wrapper">!ir abajo¡</a>
 					</h2>
 					<p>Puedes darle click al boton, si deseas visitar la herramienta. </p>
-					<a href="#" class="button large icon solid fa-check-circle">Ir a ver</a>
+					<a href="#" id="openModalLink" class="button large icon solid fa-check-circle">Ir a ver</a>
+					<!-- Modal -->
+					<div id="alertModal" class="modal">
+						<div class="modal-content">
+							<span class="close-btn">&times;</span>
+							<p>pronto podras ingresar e interactuar con nuestra plataforma. !Gracias por su comprención¡</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -415,6 +423,7 @@
 
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/alertPlataforma.js"></script>
 	<script src="assets/js/jquery.dropotron.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
