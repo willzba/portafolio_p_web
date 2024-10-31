@@ -2,7 +2,8 @@
 var modal = document.getElementById("myModal");
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("img-zoom");
+var img = document.getElementById("prem-zoom");
+var img2 = document.getElementById("gantt-zoom");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 img.onclick = function(){
@@ -10,6 +11,12 @@ img.onclick = function(){
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
 }
+
+img2.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
