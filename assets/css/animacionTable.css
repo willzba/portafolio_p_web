@@ -1,0 +1,43 @@
+/* .table-container {
+    overflow: hidden;
+  }*/ 
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    position: relative;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.445);
+    overflow: hidden;
+  }
+  
+   table td {
+    padding: 12px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #2d2d2dbd;
+  }
+  
+  table tr:nth-child(odd) {
+    background-color: #2525259a;
+  }
+  
+  /* Animación de brillo en bordes */
+  @keyframes borderGlow {
+    0% {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    40% {
+      box-shadow: 0 0 25px #a9cef8e6, 0 0 55px rgba(146, 230, 255, 0.7);
+    }
+    90% {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+  }
+  
+  #shinyTable {
+    animation: borderGlow 4s infinite ease-in-out;
+  }
