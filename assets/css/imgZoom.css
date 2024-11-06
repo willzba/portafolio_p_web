@@ -5,6 +5,11 @@
   }
   
   #prem-zoom, #gantt-zoom :hover {opacity: 0.7;}
+
+  embed {
+    width: 100%; /* para hacerlo responsive */
+    height: 70vh;
+    }
   
   /* The Modal (background) */
   .modal {
