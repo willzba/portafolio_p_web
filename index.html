@@ -9,6 +9,43 @@
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" href="assets/css/alertPlataforma.css">
 	<link rel="shortcut icon" href="images/signal1.png" type="image/x-icon">
+
+	<style>
+        /* Estilos para el modal */
+        #announcementModal {
+            display: none; /* Oculto por defecto */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        #modalContent {
+            background-color: #ffffffa1;
+            margin: 15% auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+            border-radius: 5px;
+        }
+		#modalContent p{
+			color: rgb(252, 249, 249);
+			background-color: rgb(22, 138, 240);
+			border-radius: 20px;
+		}
+        #closeBtn {
+            margin-top: 10px;
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #be2b2b;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 
 <body class="homepage is-preload">
@@ -57,6 +94,15 @@
 					</div>
 				</header>
 
+				<!-- Modal de anuncio -->
+				<div id="announcementModal">
+					<div id="modalContent">
+						<p>¡Ya Puedes interactuar con nuestra aplicacion Web, dandole click al boton IR A VER!</p>
+						<p> Recomendable ingresar desde una PC, ya que aun estamos trabajando en lo responsive de la app web.</p>
+						<p>!gracias¡</p>
+						<button id="closeBtn">Cerrar</button>
+					</div>
+				</div>
 				<!-- Banner -->
 				<div id="banner">
 					<h2><strong>VSTR:</strong> "Video Stream Theater"
@@ -65,14 +111,14 @@
 							href="#main-wrapper">!ir abajo¡</a>
 					</h2>
 					<p>Puedes darle click al boton, si deseas visitar la herramienta. </p>
-					<a href="#" id="openModalLink" class="button large icon solid fa-check-circle">Ir a ver</a>
+					<a href="http://3.17.147.201/login" id="openModalLink" class="button large icon solid fa-check-circle">Ir a ver</a>
 					<!-- Modal -->
-					<div id="alertModal" class="modal">
+					<!--<div id="alertModal" class="modal">
 						<div class="modal-content">
 							<span class="close-btn">&times;</span>
 							<p>pronto podras ingresar e interactuar con nuestra plataforma. !Gracias por su comprención¡</p>
 						</div>
-					</div>
+					</div>-->
 				</div>
 			</div>
 		</div>
@@ -428,6 +474,28 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script>
+        // JavaScript para mostrar el modal al cargar la página
+        window.onload = function() {
+            const modal = document.getElementById("announcementModal");
+            const closeBtn = document.getElementById("closeBtn");
+
+            // Mostrar el modal
+            modal.style.display = "block";
+
+            // Cerrar el modal al hacer clic en el botón de cerrar
+            closeBtn.onclick = function() {
+                modal.style.display = "none";
+            };
+
+            // También cerrar al hacer clic fuera del modal
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            };
+        };
+    </script>
 
 </body>
 
