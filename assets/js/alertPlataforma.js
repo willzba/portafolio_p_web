@@ -12,7 +12,7 @@ openModalLink.addEventListener('click', (e) => {
     // Iniciar cronómetro para cerrar el modal automáticamente después de 3 segundos
     closeModalTimeout = setTimeout(() => {
         alertModal.style.display = 'none';
-    }, 6000);
+    }, 8000);
 });
 
 // Cerrar el modal al hacer clic en la "X"
