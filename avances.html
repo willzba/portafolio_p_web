@@ -69,70 +69,66 @@
 
 							<article>
 								<header class="major">
-									<h2>No Sidebar</h2>
-									<p>Sidebars are not welcome here</p>
+									<h2>VERSIÓN DE PRUEBA 1</h2>
+									<p>En la presente se da a conocer como se creo la transmision con Java</p>
 								</header>
 
-								<span class="image featured"><img src="images/pic08.jpg" alt="" /></span>
+								<span class="image featured"><img src="/assets/images/images_ver1/prueba 1 transmision.png" alt="transmision 1" /></span>
 
-								<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-									Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-									Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-									consequat etiam lorem ipsum dolor sit amet nullam. Phasellus quam turpis,
-									feugiat sit amet ornare in, hendrerit in lectus. Praesent semper mod quis
-									eget mi. Etiam eu ante risus. Aliquam erat volutpat. Aliquam luctus et
-									mattis lectus sit amet pulvinar. Nam turpis nisi consequat etiam.</p>
+								<p>Desarrollamos un sistema de transmisión en vivo utilizando Spring Boot (WebRTC) para
+									captura
+									y procesamiento de video en vivo y WebSocket para
+									proporcionar comunicación fluida y actualizaciones en tiempo real entre el servidor
+									y el usuario.
 
-								<h3>More intriguing information</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac quam risus, at
-									tempus
-									justo. Sed dictum rutrum massa eu volutpat. Quisque vitae hendrerit sem.
-									Pellentesque lorem felis,
-									ultricies a bibendum id, bibendum sit amet nisl. Mauris et lorem quam. Maecenas
-									rutrum imperdiet
-									vulputate. Nulla quis nibh ipsum, sed egestas justo. Morbi ut ante mattis orci
-									convallis tempor.
-									Etiam a lacus a lacus pharetra porttitor quis accumsan odio. Sed vel euismod nisi.
-									Etiam convallis
-									rhoncus dui quis euismod. Maecenas lorem tellus, congue et condimentum ac,
-									ullamcorper non sapien.
-									Donec sagittis massa et leo semper a scelerisque metus faucibus. Morbi congue mattis
-									mi.
-									ultricies a bibendum id, bibendum sit amet nisl. Mauris et lorem quam. Maecenas
-									rutrum imperdiet
-									vulputate. Nulla quis nibh ipsum, sed egestas justo. Morbi ut ante mattis orci
-									convallis tempor.
-									Etiam a lacus a lacus pharetra porttitor quis accumsan odio. Sed vel euismod nisi.
-									Etiam convallis
-									rhoncus dui quis euismod. Maecenas lorem tellus, congue et condimentum ac,
-									ullamcorper non sapien.
-									Donec sagittis massa et leo semper a scelerisque metus faucibus. Morbi congue mattis
-									mi.
-									Phasellus sed nisl vitae risus tristique volutpat. Cras rutrum commodo luctus lorem
-									ipsum
-									dolor sit amet phasellus consequat.</p>
+									El sistema permite a los presentadores iniciar y detener transmisiones, mientras
+									envían notificaciones de estado instantáneas a los espectadores. Además,
+									implementamos lógica para administrar dinámicamente los hilos activos y mantener una
+									interacción continua sin la necesidad de recargar la página.
 
-								<p>Phasellus odio risus, faucibus et viverra vitae, eleifend ac purus. Praesent mattis,
-									enim
-									quis hendrerit porttitor, sapien tortor viverra magna, sit amet rhoncus nisl lacus
-									nec arcu.
-									Suspendisse laoreet metus ut metus imperdiet interdum aliquam justo tincidunt.
-									Mauris dolor urna,
-									fringilla vel malesuada ac, dignissim eu mi. Praesent mollis massa ac nulla pretium
-									pretium.
-									Suspendisse laoreet metus ut metus imperdiet interdum aliquam justo tincidunt.
-									Mauris dolor urna,
-									ultricies a bibendum id, bibendum sit amet nisl. Mauris et lorem quam. Maecenas
-									rutrum imperdiet
-									vulputate. Nulla quis nibh ipsum, sed egestas justo. Morbi ut ante mattis orci
-									convallis tempor.
-									fringilla vel malesuada ac, dignissim eu mi. Praesent mollis massa ac nulla pretium
-									pretium.
-									Maecenas tortor mauris, consectetur pellentesque dapibus eget, tincidunt vitae arcu.
-									Vestibulum purus augue, tincidunt sit amet iaculis id, porta eu purus sed feugiat
-									lorem ipsum
-									dolor nullam blandit tempus.</p>
+									Este enfoque combina la potencia de procesamiento de FFmpeg con la flexibilidad de
+									WebSockets para proporcionar una poderosa solución de transmisión en tiempo real.
+								</p>
+
+								<h3>1. Integración de WebSocket:</h3>
+								<p> - Configuramos WebSocket en Spring Boot mediante la anotación
+									`@EnableWebSocketMessageBroker`. <br>
+									- Creamos un servicio (`WebSocketService`) que permite enviar actualizaciones en
+									tiempo real a los clientes suscritos.
+								</p>
+								<h3>2. Controlador para manejo de transmisión:</h3>
+								<p> - Se implementaron endpoints para iniciar (`/start`) y detener (`/stop`) una
+									transmisión en vivo. <br>
+									- Se añadieron mensajes WebSocket en el controlador para enviar notificaciones a los
+									usuarios cuando se inicia o detiene una transmisión.
+								</p>
+								<h3>3. Actualización dinámica de transmisiones activas:</h3>
+								<p> - Se implementó la lógica para actualizar dinámicamente el estado de las
+									transmisiones en la base de datos. <br>
+									- Los usuarios pueden ver los cambios sin necesidad de actualizar la página, gracias
+									a las notificaciones en tiempo real con WebSocket.
+								</p>
+								<h3>4. Manejo de errores:</h3>
+								<p> - Añadimos validaciones para evitar iniciar múltiples transmisiones al mismo tiempo.
+								</p>
+
+								<h3>5. Cliente WebSocket:</h3>
+								<p>- Preparado para implementar un cliente en JavaScript que reciba actualizaciones de
+									estado desde el servidor. <br>
+									- Las notificaciones en tiempo real permitirán a los usuarios saber cuándo se inicia
+									o detiene una transmisión.
+								</p>
 							</article>
+							<section>
+								<h3> Próximos pasos:</h3>
+								<p>- Frontend: Implementar la interfaz del cliente WebSocket para mostrar mensajes en
+									tiempo real. <br>
+									- Optimización: Gestionar recursos del sistema cuando maneje múltiples
+									transmisiones. <br>
+									- Seguridad: Asegurar los endpoints de transmisión para evitar accesos no
+									autorizados.</p>
+							</section>
+							<a href="https://github.com/willzba/vstr-transmission.git" class="button alt icon solid fa-file-alt">Repositorio v1-transmision</a>
 
 						</div>
 					</div>
@@ -153,13 +149,13 @@
 
 										<!-- <a href="#" class="image left"><img src="images/pic04.jpg" alt="" /></a> -->
 
-										<div  ><iframe class="image left"
-											src="https://player.vimeo.com/video/1027076261?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-											frameborder="0"
-											allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-											style="border-radius: 20px; border-style: solid; border-color: rgba(22, 22, 139, 0.397); border-width: 5px;"
-											title="Pich proyecto vstr"></iframe></div>
-									<script src="https://player.vimeo.com/api/player.js"></script>
+										<div><iframe class="image left"
+												src="https://player.vimeo.com/video/1027076261?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+												frameborder="0"
+												allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+												style="border-radius: 20px; border-style: solid; border-color: rgba(22, 22, 139, 0.397); border-width: 5px;"
+												title="Pich proyecto vstr"></iframe></div>
+										<script src="https://player.vimeo.com/api/player.js"></script>
 										<div>
 											<header>
 												<span class="date">Octubre 2024</span>
